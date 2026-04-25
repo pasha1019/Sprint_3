@@ -54,7 +54,6 @@ class OnlineSalesRegisterCollector:
             # добавление имени в список __name_items
             self.name_items.append(name)
             self.number_items += 1
-            return self.name_items, self.number_items
 
     def delete_item_from_check(self, name):  # удаление товара из чека
         if name not in self.name_items:  # исключение если товара нет в __name_items
@@ -62,7 +61,6 @@ class OnlineSalesRegisterCollector:
         else:
             self.number_items -= 1
             self.name_items.remove(name)
-            return self.name_items, self.number_items
 
     def check_amount(self):  # подсчет суммы чека
         total = []
